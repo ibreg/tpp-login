@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
-  networks = [{
+  public loginForm: FormGroup;
+  public networks = [{
     value: 1,
     name: 'Network1'
   }, {
@@ -14,9 +16,19 @@ export class LoginComponent implements OnInit {
     name: 'Network2'
   }
   ]
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.loginForm = this.fb.group(
+      {
+        Username: [null,null],
+        Password: [null, null],
+        Network: [null, null]
+      }
+    )
+  }
+  onSubmit(form: NgForm) {
+    console.log(form);
   }
 
 }
