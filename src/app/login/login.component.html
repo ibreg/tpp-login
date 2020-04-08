@@ -8,9 +8,15 @@
         <div class="form-group">
           <input type="password" class="form-control w-320" id="password" placeholder="Κωδικός Πρόσβασης">
         </div>
-        <button type="submit" class="btn login-button mt-2 w-320">Σύνδεση</button>
-      </form>
-    </div>
-    
+        <div class="ml-2">
+          <mat-form-field class="dropdown">
+            <mat-label>Δίκτυα</mat-label>
+            <mat-select class="white">
+              <mat-option *ngFor="let network of networks" [value]="network.value"> {{network.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <button type="submit" class="btn login-button mt-2 w-320">Σύνδεση</button>        
+      </form>  
   </div>
 </div>
