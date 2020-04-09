@@ -3,16 +3,18 @@ import { LoginComponent } from './login.component';
 import { MatSelectModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginPipe } from './login.pipe';
 
 @NgModule({
   declarations: [    
-    LoginComponent
+    LoginComponent,
+    LoginPipe
   ],
   imports: [
     MatSelectModule,
     BrowserModule,  
     ReactiveFormsModule        
   ],
-  providers: [],  
+  providers: [LoginPipe],  
 })
 export class LoginModule { }

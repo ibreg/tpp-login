@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, NgForm } from '@angular/forms';
+import { LoginPipe } from './login.pipe';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.less']
+  styleUrls: ['./login.component.less'],
 })
 export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
@@ -28,6 +29,7 @@ export class LoginComponent implements OnInit {
     )
   }
   onSubmit(form: NgForm) {
+    
     console.log(form);
   }
 
