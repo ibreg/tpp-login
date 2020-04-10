@@ -6,6 +6,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { LandingLeftComponent } from './landing-left/landing-left.component';
 import { LandingRightComponent } from './landing-right/landing-right.component';
 import { HeaderComponent } from './header/header.component';
+import { MatListModule } from '@angular/material';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     CommonModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule,
+    
   ]
 })
 export class LandingPageModule { }
