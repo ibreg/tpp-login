@@ -4,6 +4,7 @@ import { MatSelectModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginPipe } from './login.pipe';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [    
@@ -11,6 +12,7 @@ import { LoginPipe } from './login.pipe';
     LoginPipe
   ],
   imports: [
+    CommonModule,
     MatSelectModule,
     BrowserModule,  
     ReactiveFormsModule        
